@@ -1,0 +1,1094 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #202124;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4285F4;
+}
+
+.logo span:nth-child(2) {
+    color: #EA4335;
+}
+
+.logo span:nth-child(3) {
+    color: #FBBC05;
+}
+
+.logo span:nth-child(4) {
+    color: #4285F4;
+}
+
+.logo span:nth-child(5) {
+    color: #34A853;
+}
+
+.logo span:nth-child(6) {
+    color: #EA4335;
+}
+
+.logo span:nth-child(7) {
+    color: #4285F4;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5f6368;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #4285F4;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #202124;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #5f6368;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.search-bar {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    background: white;
+    border-radius: 24px;
+    border: 1px solid #dfe1e5;
+    padding: 8px 16px;
+    box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4285F4;
+    font-size: 16px;
+}
+
+    .doodle-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: rotate(15deg);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 4px 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    font-weight: bold;
+    font-size: 12px;
+    z-index: 5;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    transition: transform 0.3s;
+}
+
+.doodle-card:hover .doodle-overlay {
+    transform: rotate(0deg) scale(1.1);
+}
+
+.doodle-overlay.red {
+    color: #EA4335;
+    border: 1px dashed #EA4335;
+}
+
+.doodle-overlay.blue {
+    color: #4285F4;
+    border: 1px dashed #4285F4;
+}
+
+.doodle-overlay.green {
+    color: #34A853;
+    border: 1px dashed #34A853;
+}
+
+.doodle-overlay.yellow {
+    color: #FBBC05;
+    border: 1px dashed #FBBC05;
+}
+
+
+.doodle-tagline {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.doodle-img {
+    position: relative;
+}
+
+.doodles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.doodle-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.doodle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.doodle-img {
+    height: 200px;
+    width: 100%;
+    background-color: #f1f3f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.doodle-img div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doodle-info {
+    padding: 15px;
+}
+
+.doodle-info h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.doodle-info p {
+    color: #5f6368;
+    font-size: 14px;
+}
+
+.doodle-date {
+    font-size: 12px;
+    color: #80868b;
+    margin-top: 8px;
+}
+
+.more-btn {
+    display: block;
+    margin: 40px auto;
+    padding: 12px 24px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-btn:hover {
+    background-color: #3367d6;
+}
+
+footer {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #dadce0;
+}
+
+footer p {
+    color: #5f6368;
+    font-size: 14px;
+}
+
+/* Doodle Art Styles */
+.flower {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.flower .center {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #FBBC05;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.flower .petal {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #EA4335;
+    border-radius: 50%;
+}
+
+.flower .petal:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flower .petal:nth-child(2) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.flower .petal:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flower .petal:nth-child(4) {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.sun {
+    width: 60px;
+    height: 60px;
+    background: #FBBC05;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(251, 188, 5, 0.8);
+}
+
+.rainbow {
+    width: 120px;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.rainbow div {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+}
+
+.rainbow div:nth-child(1) {
+    border-top-color: #EA4335;
+}
+
+.rainbow div:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    border-top-color: #FBBC05;
+    top: 10px;
+    left: 10px;
+}
+
+.rainbow div:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    border-top-color: #34A853;
+    top: 20px;
+    left: 20px;
+}
+
+.rainbow div:nth-child(4) {
+    width: 60px;
+    height: 60px;
+    border-top-color: #4285F4;
+    top: 30px;
+    left: 30px;
+}
+
+.planet {
+    width: 80px;
+    height: 80px;
+    background: #4285F4;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.planet::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #81b0ff;
+    border-radius: 50%;
+    top: 15px;
+    left: 10px;
+}
+
+.planet::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #81b0ff;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 15px;
+}
+
+.face {
+    width: 70px;
+    height: 70px;
+    background: #FBBC05;
+    border-radius: 50%;
+    position: relative;
+}
+
+.face .eye {
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    background: #202124;
+    border-radius: 50%;
+    top: 20px;
+}
+
+.face .eye:nth-child(1) {
+    left: 20px;
+}
+
+.face .eye:nth-child(2) {
+    right: 20px;
+}
+
+.face .mouth {
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    border-radius: 0 0 15px 15px;
+    background: #202124;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* New Doodle Elements */
+.butterfly {
+    position: relative;
+    width: 90px;
+    height: 70px;
+}
+
+.butterfly .body {
+    position: absolute;
+    width: 8px;
+    height: 60px;
+    background: #202124;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.butterfly .wing {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background: #EA4335;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    top: 5px;
+}
+
+.butterfly .wing:nth-child(1) {
+    left: 5px;
+    transform: rotate(-10deg);
+    background: linear-gradient(135deg, #EA4335 60%, #FBBC05 100%);
+}
+
+.butterfly .wing:nth-child(2) {
+    right: 5px;
+    transform: rotate(10deg) scaleX(-1);
+    background: linear-gradient(135deg, #EA4335 60%, #FBBC05 100%);
+}
+
+.butterfly .antenna {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background: #202124;
+    top: 0;
+}
+
+.butterfly .antenna:nth-child(3) {
+    left: 40%;
+    transform: rotate(-30deg);
+}
+
+.butterfly .antenna:nth-child(4) {
+    right: 40%;
+    transform: rotate(30deg);
+}
+
+.rocket {
+    position: relative;
+    width: 40px;
+    height: 100px;
+}
+
+.rocket .body {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    background: #EA4335;
+    border-radius: 15px 15px 0 0;
+    bottom: 20px;
+    left: 5px;
+}
+
+.rocket .head {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #4285F4;
+    border-radius: 50% 50% 0 0;
+    top: 0;
+    left: 5px;
+}
+
+.rocket .window {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #81b0ff;
+    border-radius: 50%;
+    top: 40px;
+    left: 12.5px;
+}
+
+.rocket .fin {
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    background: #34A853;
+    bottom: 20px;
+}
+
+.rocket .fin:nth-child(4) {
+    left: -5px;
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+}
+
+.rocket .fin:nth-child(5) {
+    right: -5px;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+}
+
+.rocket .flame {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background: linear-gradient(to bottom, #FBBC05, #EA4335);
+    border-radius: 0 0 10px 10px;
+    bottom: -10px;
+    left: 10px;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    animation: flame 0.5s infinite alternate;
+}
+
+@keyframes flame {
+    from { height: 25px; }
+    to { height: 35px; }
+}
+
+.book {
+    position: relative;
+    width: 80px;
+    height: 60px;
+    perspective: 1000px;
+}
+
+.book .cover {
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    background: #4285F4;
+    border-radius: 3px 8px 8px 3px;
+    left: 5px;
+    transform-origin: left;
+    transform: rotateY(10deg);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+
+.book .page {
+    position: absolute;
+    width: 65px;
+    height: 54px;
+    background: white;
+    border-radius: 0 8px 8px 0;
+    top: 3px;
+    left: 8px;
+}
+
+.book .line {
+    position: absolute;
+    height: 2px;
+    background: #ddd;
+    left: 15px;
+    right: 10px;
+}
+
+.book .line:nth-child(3) { top: 15px; }
+.book .line:nth-child(4) { top: 25px; }
+.book .line:nth-child(5) { top: 35px; }
+
+.tree {
+    position: relative;
+    width: 80px;
+    height: 100px;
+}
+
+.tree .trunk {
+    position: absolute;
+    width: 16px;
+    height: 40px;
+    background: #8B4513;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 3px 3px;
+}
+
+.tree .leaves {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #34A853;
+    border-radius: 50%;
+    top: 0;
+    left: 5px;
+}
+
+.tree .leaves::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #34A853;
+    border-radius: 50%;
+    top: 5px;
+    right: -15px;
+}
+
+.tree .leaves::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #34A853;
+    border-radius: 50%;
+    top: 5px;
+    left: -15px;
+}
+
+.ice-cream {
+    position: relative;
+    width: 70px;
+    height: 100px;
+}
+
+.ice-cream .cone {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 50px;
+    background: #FBBC05;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.ice-cream .scoop {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ice-cream .scoop:nth-child(1) {
+    background: #EA4335;
+}
+
+.ice-cream .scoop:nth-child(2) {
+    background: #4285F4;
+    bottom: 75px;
+    width: 35px;
+    height: 35px;
+}
+
+.music-note {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.music-note .note {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background: #4285F4;
+    border-radius: 50%;
+    bottom: 20px;
+    left: 30px;
+}
+
+.music-note .stem {
+    position: absolute;
+    width: 4px;
+    height: 50px;
+    background: #4285F4;
+    bottom: 40px;
+    right: 30px;
+}
+
+.music-note .flag {
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background: #4285F4;
+    top: 15px;
+    right: 30px;
+    clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 70%);
+}
+
+/* Additional Doodle Elements */
+.camera {
+    position: relative;
+    width: 80px;
+    height: 70px;
+}
+
+.camera .body {
+    position: absolute;
+    width: 70px;
+    height: 50px;
+    background: #202124;
+    border-radius: 5px;
+    bottom: 0;
+    left: 5px;
+}
+
+.camera .lens {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #4285F4;
+    border-radius: 50%;
+    top: 35px;
+    left: 25px;
+    border: 5px solid #5f6368;
+}
+
+.camera .flash {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    background: #FBBC05;
+    border-radius: 3px;
+    top: 20px;
+    right: 15px;
+}
+
+.camera .button {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #EA4335;
+    border-radius: 50%;
+    top: 15px;
+    left: 15px;
+}
+
+.paint-palette {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.paint-palette .board {
+    position: absolute;
+    width: 70px;
+    height: 55px;
+    background: #8B4513;
+    border-radius: 50% 50% 50% 5px;
+    left: 5px;
+    top: 10px;
+}
+
+.paint-palette .thumb-hole {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #6d380e;
+    border-radius: 50%;
+    left: 10px;
+    top: 45px;
+}
+
+.paint-palette .paint {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.paint-palette .paint:nth-child(3) {
+    background: #EA4335;
+    top: 20px;
+    left: 20px;
+}
+
+.paint-palette .paint:nth-child(4) {
+    background: #FBBC05;
+    top: 20px;
+    left: 45px;
+}
+
+.paint-palette .paint:nth-child(5) {
+    background: #34A853;
+    top: 40px;
+    left: 45px;
+}
+
+.paint-palette .paint:nth-child(6) {
+    background: #4285F4;
+    top: 40px;
+    left: 65px;
+}
+
+.bicycle {
+    position: relative;
+    width: 90px;
+    height: 60px;
+}
+
+.bicycle .wheel {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 4px solid #202124;
+    border-radius: 50%;
+    bottom: 5px;
+}
+
+.bicycle .wheel:nth-child(1) {
+    left: 5px;
+}
+
+.bicycle .wheel:nth-child(2) {
+    right: 5px;
+}
+
+.bicycle .frame {
+    position: absolute;
+    height: 4px;
+    background: #EA4335;
+    bottom: 20px;
+}
+
+.bicycle .frame:nth-child(3) {
+    width: 40px;
+    left: 15px;
+    transform: rotate(30deg);
+    transform-origin: left;
+}
+
+.bicycle .frame:nth-child(4) {
+    width: 35px;
+    right: 17px;
+    transform: rotate(-30deg);
+    transform-origin: right;
+}
+
+.bicycle .frame:nth-child(5) {
+    width: 40px;
+    left: 20px;
+    bottom: 35px;
+}
+
+.bicycle .handle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-top: 4px solid #202124;
+    border-left: 4px solid #202124;
+    transform: rotate(45deg);
+    top: 15px;
+    left: 15px;
+}
+
+.bicycle .seat {
+    position: absolute;
+    width: 20px;
+    height: 8px;
+    background: #202124;
+    border-radius: 3px;
+    top: 25px;
+    right: 25px;
+}
+
+.chef-hat {
+    position: relative;
+    width: 70px;
+    height: 80px;
+}
+
+.chef-hat .base {
+    position: absolute;
+    width: 60px;
+    height: 15px;
+    background: white;
+    border-radius: 10px;
+    bottom: 0;
+    left: 5px;
+}
+
+.chef-hat .top {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background: white;
+    border-radius: 25px 25px 5px 5px;
+    bottom: 15px;
+    left: 10px;
+}
+
+.chef-hat .fold {
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    bottom: 20px;
+}
+
+.chef-hat .fold:nth-child(3) {
+    left: 20px;
+}
+
+.chef-hat .fold:nth-child(4) {
+    left: 35px;
+}
+
+.chef-hat .fold:nth-child(5) {
+    left: 50px;
+}
+
+.robot {
+    position: relative;
+    width: 80px;
+    height: 90px;
+}
+
+.robot .head {
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    background: #5f6368;
+    border-radius: 10px;
+    top: 0;
+    left: 15px;
+    border: 2px solid #202124;
+}
+
+.robot .eye {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #4285F4;
+    border-radius: 50%;
+    top: 15px;
+    border: 1px solid #202124;
+}
+
+.robot .eye:nth-child(2) {
+    left: 25px;
+}
+
+.robot .eye:nth-child(3) {
+    right: 25px;
+}
+
+.robot .body {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background: #EA4335;
+    border-radius: 5px;
+    top: 45px;
+    left: 10px;
+    border: 2px solid #202124;
+}
+
+.robot .arm {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: #FBBC05;
+    border-radius: 5px;
+    top: 48px;
+    border: 1px solid #202124;
+}
+
+.robot .arm:nth-child(5) {
+    left: 0;
+}
+
+.robot .arm:nth-child(6) {
+    right: 0;
+}
+
+.lighthouse {
+    position: relative;
+    width: 60px;
+    height: 100px;
+}
+
+.lighthouse .base {
+    position: absolute;
+    width: 40px;
+    height: 70px;
+    background: linear-gradient(to right, #EA4335, #FBBC05, #EA4335);
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+    left: 10px;
+}
+
+.lighthouse .top {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: #4285F4;
+    border-radius: 5px;
+    top: 10px;
+    left: 15px;
+}
+
+.lighthouse .light {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #FBBC05;
+    border-radius: 50%;
+    top: 15px;
+    left: 25px;
+    box-shadow: 0 0 10px #FBBC05;
+}
+
+.lighthouse .stripe {
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    background: white;
+    left: 10px;
+}
+
+.lighthouse .stripe:nth-child(4) {
+    bottom: 50px;
+}
+
+.lighthouse .stripe:nth-child(5) {
+    bottom: 30px;
+}
+
+/* Animation for new doodles */
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .doodles-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    nav ul li {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .doodles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 24px;
+    }
+}
